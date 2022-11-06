@@ -14,13 +14,5 @@
     "morgan": "^1.10.0",
     "mysql2": "^2.3.3",
     "nodemon": "^2.0.20"
-  },
-  "nodemonConfig": {
-    "env": {
-      "DATABASE_HOST": "localhost",
-      "DATABASE_NAME": "tx_db",
-      "DATABASE_USER": "root",
-      "DATABASE_PASSWORD": "alfonso"
-    }
   }
 }

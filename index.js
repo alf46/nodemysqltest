@@ -2,6 +2,8 @@
 const express = require("express");
 const morgan = require('morgan')
 const mysql = require('mysql2');
+const { config } = require("dotenv");
+config()
 
 // settions
 const app = express();
@@ -30,7 +32,7 @@ app.get('/api/account', (req, res) => {
         console.log('Connected as id ' + connection.threadId);
     });
 
-    connection.query('SELECT * FROM account', function (error, results, fields) {
+    connection.query(`SELECT * FROM ${process.env.TABLE_NAME}`, function (error, results, fields) {
         if (error)
             throw error;
         res.json(results)
